@@ -7,7 +7,7 @@ async function get_short_url(req, res) {
   const url = await URLModel.findOne({ short_url })
 
   if (!url) {
-    res.status(404).send('404')
+    res.status(404).render('404', { url: req.url })
     return
   }
 
