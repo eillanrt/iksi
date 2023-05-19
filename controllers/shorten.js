@@ -1,9 +1,11 @@
 import URLModel from '../models/url.js'
 import dns from 'dns'
 import { nanoid } from 'nanoid'
-import { getHostname, randomFrom } from '../utils/index.js'
+import getHostname from '../utils/getHostname.js'
+import randomFrom from '../utils/randomFrom.js'
 
 async function post_shorten_url(req, res) {
+  console.log(req.body)
   const { original_url } = req.body
 
   try {
@@ -19,13 +21,15 @@ async function post_shorten_url(req, res) {
     }
 
     // Create new URL if it does not yet exist
-    const new_url = URLModel.create({
+    const new_url = await URLModel.create({
       original_url,
       short_url: nanoid(randomFrom(5, 7)),
       number_of_visits: 0,
     })
+
+    res.status(201).json(new_url)
   } catch (err) {
-    console.log(err.message)
+    console.log(err)
     res.status(404).json({
       status: 404,
     })
