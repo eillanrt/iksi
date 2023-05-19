@@ -22,12 +22,30 @@
       </div>
     </form>
 
+    <div class="response-container">
+      <div>
+        <h1>HTTP Response</h1>
+        <pre><code class="response-info"><!-- JSON text here--></code></pre>
+      </div>
+      <div>
+        <h1>Data</h1>
+        <pre><code class="response-data"><!-- JSON text here--></code></pre>
+      </div>
+    </div>
+
     <script>
       const form = document.querySelector('form')
+      const response_info_block = document.querySelector('.response-info')
+      const response_data_block = document.querySelector('.response-data')
+      const response_container = document.querySelector('.response-container')
 
       form.addEventListener('submit', async (event) => {
         event.preventDefault()
         const original_url = document.querySelector('input').value
+
+        if (response_container.style.display !== 'block') {
+          response_container.style.display = 'block'
+        }
 
         const fetch_options = {
           method: 'POST',
@@ -38,12 +56,20 @@
         }
 
         const res = await fetch('/shorten', fetch_options)
+        console.log(res)
+        response_info_block.innerText = JSON.stringify(res, ['ok', 'status'])
 
         if (!res.ok) {
           return
         }
 
         const data = await res.json()
+        console.log(data)
+        response_data_block.innerText = JSON.stringify(
+          data,
+          ['_id', 'original_url', 'short_url', 'number_of_visits'],
+          2
+        )
       })
     </script>
   </body>
