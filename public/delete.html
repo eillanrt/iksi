@@ -44,6 +44,12 @@
         const res = await fetch('/delete', fetch_options)
         const data = await res.json()
 
+        if (data.deleted_url) {
+          alert('URL data was deleted')
+        } else {
+          alert('URL does not exist in the DB')
+        }
+
         setTimeout(() => {
           window.location.href = data.redirect
         }, 3000)
