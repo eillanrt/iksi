@@ -2,7 +2,6 @@ import URLModel from '../models/url.js'
 
 async function get_short_url(req, res) {
   const { short_url } = req.params
-  console.log('short url iss ..... ', { short_url })
 
   const url = await URLModel.findOne({ short_url })
 
