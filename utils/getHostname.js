@@ -1,7 +1,6 @@
 import { URL } from 'url'
 
 function getHostname(url) {
-  console.log(url)
   try {
     return new URL(url).hostname
   } catch (err) {
