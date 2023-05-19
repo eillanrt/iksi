@@ -78,3 +78,42 @@ button {
   color: #ffffff;
   font-family: sans-serif;
 }
+
+.response-container {
+  width: 600px;
+  margin: 50px auto;
+  padding: 16px;
+  display: none;
+  border: solid black 1px;
+  overflow: scroll;
+}
+
+.response-container h1 {
+  font-size: 1.3rem;
+}
+
+.response-container div {
+  margin: 18px auto;
+  margin-bottom: 6px;
+}
+
+.response-info {
+  margin-bottom: 10px;
+}
+
+.response-data {
+  margin-bottom: 10px;
+}
+
+.response-info code,
+.response-data code {
+  font-family: 'Source Code Pro', monospace;
+  color: #333333;
+  background-color: #ffffff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  white-space: pre;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
