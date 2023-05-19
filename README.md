@@ -13,6 +13,7 @@ A simple url-shrinker web server
   -- install necessary dependecies `npm install`
 - run the server
   `npx nodemon server.js `
+- Open `http://127.0.0.1:3000` on browser
 
 ## `GET  /:short_url`
 
