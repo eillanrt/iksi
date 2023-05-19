@@ -16,9 +16,11 @@ body {
 
 form {
   width: 400px;
-  margin: 0 auto;
+  margin: 50px auto;
   padding: 10px;
   border: 1px solid #ccc;
+  background-color: #ffffff;
+  border-radius: 5px;
 }
 
 label {
@@ -26,6 +28,7 @@ label {
   font-size: 1.3rem;
   font-weight: bold;
   margin-bottom: 10px;
+  color: #333333;
 }
 
 input {
@@ -51,32 +54,11 @@ button {
   padding: 10px 20px;
   border: none;
   cursor: pointer;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 button:hover {
   background-color: #2e6da4;
-}
-
-/* Custom CSS */
-
-form {
-  background-color: #ffffff;
-  border-radius: 5px;
-  margin-top: 10px;
-}
-
-label {
-  color: #333333;
-}
-
-input {
-  color: #333333;
-  font-family: sans-serif;
-}
-
-button {
-  color: #ffffff;
-  font-family: sans-serif;
 }
 
 .response-container {
