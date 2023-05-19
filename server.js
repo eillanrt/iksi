@@ -4,6 +4,7 @@ import dotenv from 'dotenv'
 
 import shortenRoute from './routes/shorten.js'
 import indexRoute from './routes/index.js'
+import deleteRoute from './routes/delete.js'
 
 if (process.env.NODE_ENV !== 'production') {
   dotenv.config()
@@ -32,6 +33,7 @@ mongoose
     })
   })
 
+app.use('/delete', deleteRoute)
 app.use('/', indexRoute)
 app.use('/shorten', shortenRoute)
 
