@@ -21,6 +21,7 @@ form {
   border: 1px solid #ccc;
   background-color: #ffffff;
   border-radius: 5px;
+  text-align: center;
 }
 
 label {
@@ -59,6 +60,10 @@ button {
 
 button:hover {
   background-color: #2e6da4;
+}
+
+button.delete {
+  background-color: red;
 }
 
 .response-container {
