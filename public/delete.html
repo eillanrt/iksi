@@ -4,14 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Delete</title>
+    <title>Delete shorten URL</title>
     <link rel="stylesheet" href="/styles/style.css" />
   </head>
   <body>
     <form id="url-form">
       <div>
         <label for="url">URL:</label><br />
-        <p>If the long URL you submit exists in the DB. It will be deleted</p>
+        <p>
+          If the long URL you submit exists in the DB. It will be deleted. You
+          will be redirected to homepage afterwards .
+        </p>
         <input
           id="url"
           name="url"
@@ -41,7 +44,9 @@
         const res = await fetch('/delete', fetch_options)
         const data = await res.json()
 
-        window.location.href = data.redirect
+        setTimeout(() => {
+          window.location.href = data.redirect
+        }, 5000)
       })
     </script>
   </body>
