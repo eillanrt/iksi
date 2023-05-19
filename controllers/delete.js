@@ -10,8 +10,10 @@ async function get_delete_url(req, res) {
 }
 
 async function delete_delete_url(req, res) {
-  console.log(req.body)
-  res.json({})
+  const { url } = req.body
+  await URLModel.findOneAndDelete({ original_url: url })
+
+  res.json({ redirect: '/' })
 }
 
 export { get_delete_url, delete_delete_url }
