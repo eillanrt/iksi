@@ -1,12 +1,13 @@
 import URLModel from '../models/url.js'
 
-async function get_shorten_url(req, res) {
+async function get_short_url(req, res) {
   const { short_url } = req.params
+  console.log('short url iss ..... ', { short_url })
 
   const url = await URLModel.findOne({ short_url })
 
   if (!url) {
-    res.status(404).render('404')
+    res.status(404).send('404')
     return
   }
 
@@ -20,4 +21,4 @@ async function get_shorten_url(req, res) {
   res.redirect(url.original_url)
 }
 
-export default get_shorten_url
+export default get_short_url

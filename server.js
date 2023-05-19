@@ -3,6 +3,7 @@ import mongoose from 'mongoose'
 import dotenv from 'dotenv'
 
 import shortenRoute from './routes/shorten.js'
+import indexRoute from './routes/index.js'
 
 if (process.env.NODE_ENV !== 'production') {
   dotenv.config()
@@ -31,6 +32,7 @@ mongoose
     })
   })
 
+app.use('/', indexRoute)
 app.use('/shorten', shortenRoute)
 
 app.use((req, res) => {
