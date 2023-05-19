@@ -1,0 +1,31 @@
+div.not-found {
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+h2 {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+p {
+  margin-top: 10px;
+  text-align: center;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}
