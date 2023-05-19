@@ -5,7 +5,6 @@ import getHostname from '../utils/getHostname.js'
 import randomFrom from '../utils/randomFrom.js'
 
 async function post_shorten_url(req, res) {
-  console.log(req.body)
   const { original_url } = req.body
 
   try {
