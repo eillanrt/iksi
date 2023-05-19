@@ -31,3 +31,5 @@ async function post_shorten_url(req, res) {
     })
   }
 }
+
+export default post_shorten_url
