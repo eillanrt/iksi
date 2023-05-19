@@ -1,7 +1,7 @@
-import URLModel from '../models/url'
+import URLModel from '../models/url.js'
 import dns from 'dns'
 import { nanoid } from 'nanoid'
-import { getHostname, randomFrom } from '../utils'
+import { getHostname, randomFrom } from '../utils/index.js'
 
 async function post_shorten_url(req, res) {
   const { original_url } = req.body

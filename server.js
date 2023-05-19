@@ -2,7 +2,7 @@ import express from 'express'
 import mongoose from 'mongoose'
 import dotenv from 'dotenv'
 
-import shortenRoute from './routes/shorten'
+import shortenRoute from './routes/shorten.js'
 
 if (process.env.NODE_ENV !== 'production') {
   dotenv.config()

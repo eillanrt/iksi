@@ -1,4 +1,4 @@
-import URLModel from '../models/url'
+import URLModel from '../models/url.js'
 
 async function get_shorten_url(req, res) {
   const { short_url } = req.params
