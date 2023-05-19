@@ -11,15 +11,38 @@
     <form id="url-form">
       <div>
         <label for="url">URL:</label><br />
+        <p>If the long URL you submit exists in the DB. It will be deleted</p>
         <input
           id="url"
           name="url"
           type="url"
-          placeholder="https://duck.com"
+          placeholder="Enter long URL here"
           required
         /><br />
         <button type="submit" class="delete">DELETE (Delete Request)</button>
       </div>
     </form>
+
+    <script>
+      const form = document.querySelector('form')
+
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault()
+        const url = document.querySelector('input').value
+
+        const fetch_options = {
+          method: 'DELETE',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ url }),
+        }
+
+        const res = await fetch('/delete', fetch_options)
+        const data = await res.json()
+
+        window.location.href = data.redirect
+      })
+    </script>
   </body>
 </html>
