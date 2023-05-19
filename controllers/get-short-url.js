@@ -20,4 +20,4 @@ async function get_short_url(req, res) {
   res.redirect(url.original_url)
 }
 
-export default get_short_url
+export { get_short_url }

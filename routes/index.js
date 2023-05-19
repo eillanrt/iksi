@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import get_short_url from '../controllers/get-short-url.js'
+import { get_short_url } from '../controllers/get-short-url.js'
 
 const router = Router()
 

@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import post_shorten_url from '../controllers/shorten.js'
+import { post_shorten_url } from '../controllers/shorten.js'
 
 const router = Router()
 
