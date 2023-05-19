@@ -25,9 +25,9 @@ async function getShortURL(longURL) {
   const res = await fetch('/shorten', {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
     },
-    body: JSON.stringify(original_url: longURL)
+    body: JSON.stringify({ original_url: longURL }),
   })
 
   const data = await res.json()
