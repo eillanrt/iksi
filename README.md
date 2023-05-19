@@ -10,7 +10,7 @@ A simple url-shrinker web server
 
 - Go to [https://mongodb.com](https://mongodb.com). Set up a database and get URI. Choose nodeJS as the driver
 - Creata a `.env` file and add `MONGOD_URI` key with a corresponding value of the URI obtained from mongoDB
-  -- install necessary dependecies `npm install`
+- install necessary dependecies `npm install`
 - run the server
   `npx nodemon server.js `
 - Open `http://127.0.0.1:3000` on browser
