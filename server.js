@@ -2,6 +2,8 @@ import express from 'express'
 import mongoose from 'mongoose'
 import dotenv from 'dotenv'
 
+import shortenRoute from './routes/shorten'
+
 if (process.env.NODE_ENV !== 'production') {
   dotenv.config()
 }
@@ -27,6 +29,8 @@ mongoose
     })
   })
 
-app.get('/', (req, res) => {
-  res.send('HEY')
+app.use('/shorten', shortenRoute)
+
+app.use((req, res) => {
+  res.status(404).render('404', { url: req.url })
 })
