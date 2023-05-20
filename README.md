@@ -58,4 +58,8 @@ Then append that short id string in to the origin
 
 Deletes a speciifed URL Data
 
----
+## Screenshots
+
+## ![Screenshot of form](/screenshots/screenshot1.png)
+
+## ![Screenshot of form](/screenshots/screenshot2.png)
