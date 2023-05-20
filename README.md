@@ -9,7 +9,7 @@ A simple url-shrinker web server
 ## RUN
 
 - Go to [https://mongodb.com](https://mongodb.com). Set up a database and get URI. Choose nodeJS as the driver
-- Creata a `.env` file and add `MONGOD_URI` key with a corresponding value of the URI obtained from mongoDB
+- Creata a `.env` file and add `MONGODB_URI` key with a corresponding value of the URI obtained from mongoDB
 - install necessary dependecies `npm install`
 - run the server
   `npx nodemon server.js `
@@ -19,7 +19,9 @@ A simple url-shrinker web server
 
 Will redirect to the corresponding original URL if it is a valid `short url`. Otherwise it will respond with `404`
 
-### The following code demonstrates how to send POST request to the server
+## `POST  /shorten`
+
+The following code demonstrates how to send POST request to the server
 
 ```js
 async function getShortURL(longURL) {
@@ -51,3 +53,9 @@ getShortURL('https://www.youtube.com/watch?v=EFwa5Owp0-k') // short id string
 Then append that short id string in to the origin
 
 `http://127.0.0.1:3000/<short-id-string>`
+
+## `DELETE /delete`
+
+Deletes a speciifed URL Data
+
+---
