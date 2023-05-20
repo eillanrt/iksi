@@ -34,8 +34,8 @@ mongoose
   })
 
 app.use('/delete', deleteRoute)
-app.use('/', indexRoute)
 app.use('/shorten', shortenRoute)
+app.use('/', indexRoute)
 
 app.use((req, res) => {
   res.status(404).render('404', { url: req.url })
