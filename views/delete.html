@@ -29,10 +29,7 @@
     <form id="url-form">
       <div>
         <label for="url">URL:</label><br />
-        <p>
-          If the long URL you submit exists in the DB. It will be deleted. You
-          will be redirected to the homepage after 3 seconds.
-        </p>
+        <p>If the long URL you submit exists in the DB. It will be deleted.</p>
         <input
           id="url"
           name="url"
@@ -68,10 +65,6 @@
         } else {
           alert('URL does not exist in the DB')
         }
-
-        setTimeout(() => {
-          window.location.href = data.redirect
-        }, 3000)
       })
     </script>
   </body>
