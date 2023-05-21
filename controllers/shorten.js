@@ -30,7 +30,7 @@ async function post_shorten_url(req, res) {
   } catch (err) {
     console.log(err)
     res.status(400).json({
-      status: 404,
+      status: 400,
     })
   }
 }
