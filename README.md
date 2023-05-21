@@ -54,9 +54,9 @@ Then append that short id string in to the origin
 
 `http://127.0.0.1:3000/<short-id-string>`
 
-## `DELETE /delete`
+## `DELETE  /delete`
 
-Deletes a speciifed URL Data
+Deletes a specified URL Data
 
 ## Screenshots
 
