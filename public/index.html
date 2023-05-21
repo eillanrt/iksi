@@ -11,6 +11,10 @@
     <form id="url-form">
       <div>
         <label for="original_url">Long URL:</label><br />
+        <p>
+          <code>https://</code> or <code>http://</code> are required to be
+          included in the url
+        </p>
         <input
           id="original_url"
           name="original_url"
@@ -61,6 +65,8 @@
         response_info_block.innerText = JSON.stringify(res, ['ok', 'status'])
 
         if (!res.ok) {
+          alert('INVALID URL')
+          response_data_block.innerText = res.statusText
           return
         }
 
