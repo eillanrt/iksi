@@ -6,7 +6,7 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
 async function get_delete_url(req, res) {
-  res.sendFile('delete.html', { root: path.join(__dirname, '..', '/public') })
+  res.sendFile('delete.html', { root: path.join(__dirname, '..', '/views') })
 }
 
 async function delete_delete_url(req, res) {

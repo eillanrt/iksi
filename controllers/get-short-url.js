@@ -6,7 +6,7 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
 async function get_index_page(req, res) {
-  res.sendFile('index.html', { root: path.join(__dirname, '..', 'public') })
+  res.sendFile('index.html', { root: path.join(__dirname, '..', '/views') })
 }
 
 async function get_short_url(req, res) {
