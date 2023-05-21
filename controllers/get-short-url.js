@@ -1,4 +1,13 @@
 import URLModel from '../models/url.js'
+import { fileURLToPath } from 'url'
+import path, { dirname } from 'path'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
+
+async function get_index_page(req, res) {
+  res.sendFile('index.html', { root: path.join(__dirname, '..', 'public') })
+}
 
 async function get_short_url(req, res) {
   const { short_url } = req.params
@@ -20,4 +29,4 @@ async function get_short_url(req, res) {
   res.redirect(url.original_url)
 }
 
-export { get_short_url }
+export { get_index_page, get_short_url }
