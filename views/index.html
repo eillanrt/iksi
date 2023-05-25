@@ -44,7 +44,7 @@
       </div>
       <a href="/delete">Delete page</a>
     </form>
-
+    <div id="redirect-link-block"><p id="redirect-link"></p></div>
     <div class="response-container">
       <h1>See your developer console for more info</h1>
       <div>
@@ -62,6 +62,7 @@
       const response_info_block = document.querySelector('.response-info')
       const response_data_block = document.querySelector('.response-data')
       const response_container = document.querySelector('.response-container')
+      const redirect_link_block = document.querySelector('#redirect-link')
 
       form.addEventListener('submit', async (event) => {
         event.preventDefault()
@@ -100,6 +101,8 @@
           ['_id', 'original_url', 'short_url', 'number_of_visits'],
           2
         )
+        const { origin } = new URL(window.location.href)
+        redirect_link_block.innerText = `${origin}/${data.short_url}`
       })
     </script>
   </body>
