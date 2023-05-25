@@ -70,6 +70,7 @@ button.delete {
   width: 400px;
   text-align: center;
   margin: 30px auto;
+  display: none;
 }
 
 .response-container {
