@@ -89,11 +89,7 @@
 
         const res = await fetch('/shorten', fetch_options)
         console.log(res)
-        response_info_block.innerText = JSON.stringify(res, [
-          'ok',
-          'status',
-          'statusText',
-        ])
+        response_info_block.innerText = JSON.stringify(res, ['ok', 'status'])
 
         if (!res.ok) {
           alert('INVALID URL')
