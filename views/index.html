@@ -65,6 +65,7 @@
       const response_data_block = document.querySelector('.response-data')
       const response_container = document.querySelector('.response-container')
       const redirect_link_block = document.querySelector('#redirect-link-block')
+      const redirect_link_code = document.querySelector('#redirect-link')
 
       form.addEventListener('submit', async (event) => {
         event.preventDefault()
@@ -105,7 +106,7 @@
           2
         )
         const { origin } = new URL(window.location.href)
-        redirect_link_block.innerText = `${origin}/${data.short_url}`
+        redirect_link_code.innerText = `${origin}/${data.short_url}`
       })
     </script>
   </body>
