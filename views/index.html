@@ -44,7 +44,7 @@
       </div>
       <a href="/delete">Delete page</a>
     </form>
-    <div id="redirect-link-block" style="display: none">
+    <div id="redirect-link-block">
       <p>Redirect Link: <code id="redirect-link"></code></p>
     </div>
     <div class="response-container">
@@ -64,7 +64,7 @@
       const response_info_block = document.querySelector('.response-info')
       const response_data_block = document.querySelector('.response-data')
       const response_container = document.querySelector('.response-container')
-      const redirect_link_block = document.querySelector('#redirect-link')
+      const redirect_link_block = document.querySelector('#redirect-link-block')
 
       form.addEventListener('submit', async (event) => {
         event.preventDefault()
@@ -75,6 +75,7 @@
         }
 
         if (redirect_link_block.style.display !== 'block') {
+          console.log('shoe')
           redirect_link_block.style.display = 'block'
         }
 
