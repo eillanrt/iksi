@@ -66,6 +66,12 @@ button.delete {
   background-color: red;
 }
 
+#redirect-link-block {
+  width: 400px;
+  text-align: center;
+  margin: 30px auto;
+}
+
 .response-container {
   width: 600px;
   margin: 50px auto;
