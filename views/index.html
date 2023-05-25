@@ -44,7 +44,7 @@
       </div>
       <a href="/delete">Delete page</a>
     </form>
-    <div id="redirect-link-block">
+    <div id="redirect-link-block" style="display: none">
       <p>Redirect Link: <code id="redirect-link"></code></p>
     </div>
     <div class="response-container">
@@ -72,6 +72,10 @@
 
         if (response_container.style.display !== 'block') {
           response_container.style.display = 'block'
+        }
+
+        if (redirect_link_block.style.display !== 'block') {
+          redirect_link_block.style.display = 'block'
         }
 
         const fetch_options = {
