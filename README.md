@@ -47,7 +47,9 @@ async function getShortURL(longURL) {
   return data.short_url
 }
 
-getShortURL('https://www.youtube.com/watch?v=EFwa5Owp0-k') // short id string
+getShortURL('https://www.youtube.com/watch?v=EFwa5Owp0-k').then(shortURL => {
+    console.log(shortURL)
+})
 ```
 
 Then append that short id string in to the origin
